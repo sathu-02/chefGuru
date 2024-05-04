@@ -4,8 +4,6 @@ import RecipeCard from '../../Components/RecipeCard'
 export default function Chat() {
     const [prompt,setPrompt] = useState(null)
     const [results,setResults] = useState([])
-    console.log(prompt)
-    console.log(typeof results)
 
     
     const action = async ()=>{
@@ -13,7 +11,6 @@ export default function Chat() {
       if(response.ok){
         const data= await response.json()
         console.log(`response ok`)
-        console.log(data.hits)
         setResults(data.hits)
       }
     }
