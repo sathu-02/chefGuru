@@ -17,32 +17,20 @@ export default function Chat() {
         setResults(data.hits)
       }
     }
-  return (
-    <div className="container">
-        <h1>Recipe Finder</h1>
     
-            <input type="text" id="search" placeholder="Enter ingredients or your recipe....." onChange={(e)=>{
+    return (
+      <div className="container">
+          <h1>Sanji</h1>
+    
+              <input type="text" id="search" placeholder="Enter ingredients or your recipe....." onChange={(e)=>{
                 setPrompt(e.target.value)
-            }}/>
-            <button type="button" id="submit" className="btn" onClick={action}>Search</button>
-            {results.map(recipe => (
-              <div id='recipes' key={recipe.recipe.label}>
-                  <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-                  <h3>{recipe.recipe.label}</h3>
-                  <ul>
-                      {recipe.recipe.ingredientLines.map(ingredient => (
-                            <li key={ingredient}>{ingredient}</li>
-                       ))}
-                  </ul>
-              <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">
-                    View Recipe
-              </a>
-              {/* Under work */}
-              {/* <RecipeCard props/> */}
-              <hr />
-  </div>
-))}
-    </div>
+              }}/>
+              <button type="button" id="submit" className="btn" onClick={action}>Search</button>
+            {
+            results.map(recipe => (
+              <RecipeCard image={recipe.recipe.image} label ={recipe.recipe.label} url={recipe.recipe.url} ingredientLines={recipe.recipe.ingredientLines}/> 
+            ))}
+      </div>
 
   )
 }
