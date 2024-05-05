@@ -18,15 +18,15 @@ export default function Chat() {
     return (
       <div className="container">
           <h1>Sanji</h1>
-    
+
+            {results.map(recipe => (
+              <RecipeCard image={recipe.recipe.image} label ={recipe.recipe.label} url={recipe.recipe.url} ingredientLines={recipe.recipe.ingredientLines}/> 
+            ))}
               <input type="text" id="search" placeholder="Enter ingredients or your recipe....." onChange={(e)=>{
                 setPrompt(e.target.value)
               }}/>
               <button type="button" id="submit" className="btn" onClick={action}>Search</button>
-            {
-            results.map(recipe => (
-              <RecipeCard image={recipe.recipe.image} label ={recipe.recipe.label} url={recipe.recipe.url} ingredientLines={recipe.recipe.ingredientLines}/> 
-            ))}
+            
       </div>
 
   )
