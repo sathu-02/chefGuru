@@ -1,0 +1,72 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sidebar {
+  position: fixed; /* Ensure it remains fixed on the left side */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  width: 200px; /* Set the width of the sidebar */
+  height: 100vh; /* Set the height to match the viewport height */
+  background-color: #333; /* Set a background color */
+  color: #fff; /* Set text color */
+  padding: 20px; /* Add padding */
+  margin: 0; /* Remove any default margins */
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh; /* Set the chat container to take the full viewport height */
+}
+
+.sidebar {
+  flex: 0 0 auto; /* Allow the sidebar to grow or shrink, but not beyond its initial size */
+  width: 200px; /* Set the width of the sidebar */
+  background-color: #333; /* Sidebar background color */
+  color: #fff; /* Text color */
+}
+
+.chat {
+  flex: 1; /* Allow the chat content to grow to fill the remaining space */
+  overflow-y: auto; /* Add a scrollbar if the content overflows vertically */
+}

@@ -1,0 +1,162 @@
+body {
+    background-color: #f0f5ff; /* Light blue background color */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+#recipes{
+    color:#000
+}
+
+#search{
+    color:#000
+}
+
+.container {
+    padding: 20px;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+input[type="text"] {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+    width: 300px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 20px;
+    transition: background-color 0.2s;
+}
+
+    button[type="submit"]:hover {
+        background-color: #0069d9;
+    }
+
+#results {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 40px 0;
+}
+
+    #results > div {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #results img {
+        border-radius: 8px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+
+    #results h3 {
+        color: #333;
+        font-size: 24px;
+        margin: 0;
+    }
+
+    #results ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #results li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    #results a {
+        background-color: #007bff;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 16px;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+        #results a:hover {
+            background-color: #0069d9;
+        }
+
+        .search {
+            position: fixed; /* Position the search bar fixed on the bottom */
+            bottom: 0; /* Align it to the bottom */
+            left: 0; /* Align it to the left */
+            width: 100%; /* Make it full width */
+            background-color: #f9f9f9; /* Background color */
+            padding: 10px; /* Add some padding */
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+            border-top: 1px solid #ccc; /* Add a border at the top */
+            z-index: 99; /* Ensure it appears above content but below navbar */
+          }
+                    
+          .search input[type="text"] {
+            width: calc(100% - 80px); /* Adjust the width of the input */
+            padding: 8px; /* Add padding to the input */
+            border: 1px solid #ccc; /* Add a border to the input */
+            border-radius: 5px; /* Add some border-radius to the input */
+          }
+          
+          .search button {
+            width: 80px; /* Set the width of the button */
+            padding: 8px; /* Add padding to the button */
+            border: none; /* Remove the border */
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
+            border-radius: 5px; /* Add some border-radius to the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+          }
+          
+          .search button:hover {
+            background-color: #0056b3; /* Button background color on hover */
+          }
